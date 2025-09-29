@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@coreui/icons": "^3.0.1",
+    "@google/genai": "^1.20.0"
+  }
+}

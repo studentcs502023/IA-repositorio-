@@ -1,0 +1,93 @@
+body {
+    background-color: #1a1a1a; /* oscuro neutro */
+    color: white;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor general del chat */
+#chat {
+    background-color: #f5f5f5; /* fondo claro para los mensajes */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 50px auto;
+    height: 70vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo de mensaje del científico emocional */
+.cientificoemocional-mensaje {
+    align-self: flex-start; /* izquierda */
+    background-color: #ffebcc; /* tono cálido */
+    color: #663300;
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 70%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    word-wrap: break-word;
+}
+
+/* Estilo de mensaje del científico lógico */
+.cientificocientifico-mensaje {
+    align-self: flex-end; /* derecha */
+    background-color: #cce0ff; /* tono frío */
+    color: #003366;
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 70%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    word-wrap: break-word;
+}
+
+/* Contenedor de botones */
+#conversacion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Botón conversar */
+#conversar {
+    background-color: #ffffff;
+    color: #28a745;
+    border: 2px solid #28a745;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#conversar:hover {
+    background-color: #e6ffe6;
+}
+
+/* Botón reiniciar */
+#reiniciar {
+    background-color: #ffcccc;
+    color: #b30000;
+    border: 2px solid #b30000;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#reiniciar:hover {
+    background-color: #ff9999;
+}
+
+/* Contenedor principal de la página */
+.one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
