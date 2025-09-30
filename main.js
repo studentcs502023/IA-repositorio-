@@ -67,8 +67,8 @@ async function ejecutarTurno() {
   const mensajeCientifico = await llamarGemini(cientificoHistory);
   cientificoHistory.push({ role: "model", parts: [{ text: mensajeCientifico }] });
 
-  conversation.push({ id: turnoActual, emisor: "albert", mensaje: mensajeCientifico });
-  pintarMensaje("albert", mensajeCientifico, turnoActual);
+  conversation.push({ id: turnoActual, emisor: "Albert", mensaje: mensajeCientifico });
+  pintarMensaje("Albert", mensajeCientifico, turnoActual);
 }
 
 function pintarMensaje(emisor, mensaje, id) {
@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
 
 
 
