@@ -26,11 +26,9 @@ const cientificoContext = [
   },
 ];
 
-// Historiales separados
 let emocionalHistory = [...emocionalContext];
 let cientificoHistory = [...cientificoContext];
 
-// 🚀 Llamada genérica a Gemini con Axios
 async function llamarGemini(history) {
   try {
     const res = await axios.post(
@@ -46,7 +44,6 @@ async function llamarGemini(history) {
   }
 }
 
-// 🔄 Ejecutar un turno
 async function ejecutarTurno() {
   const turnoActual = Math.floor(conversation.length / 2) + 1;
 
@@ -74,7 +71,6 @@ async function ejecutarTurno() {
   pintarMensaje("albert", mensajeCientifico, turnoActual);
 }
 
-// 🎨 Pintar mensajes en el chat
 function pintarMensaje(emisor, mensaje, id) {
   const chatDiv = document.getElementById("chat");
 chatDiv.style.margin= "20px"
@@ -95,13 +91,12 @@ contenedor.style.gap= "20px"
   chatDiv.appendChild(contenedor);
 }
 
-// 🎛️ Evento del botón conversar
 document.getElementById("conversar").addEventListener("click", async () => {
   await ejecutarTurno();
   console.log("Conversación actual:", conversation);
 });
 
-// 🎛️ Evento del botón reiniciar
+
 document.getElementById("reiniciar").addEventListener("click", () => {
   conversation = []; 
   location.reload(); 
@@ -114,13 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error('Error: #chat no encontrado');
     return;
   }
-  if (!bajarBtn) {
-    console.error('Error: #bajar no encontrado');
-    return;
-  }
+ 
 
 
 });
+
 
 
 
