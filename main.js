@@ -1,11 +1,11 @@
-// 🚨 IMPORTANTE: esto expone la API Key en el navegador, úsalo solo para pruebas.
+
 const API_KEY = "AIzaSyCUL5zhTg91OG38D-Emx1rFNuR6To9OGeA";
 const MODEL = "gemini-2.0-flash";
 
-// Conversación completa (para pintar y guardar)
+
 let conversation = [];
 
-// Contextos iniciales
+
 const emocionalContext = [
   {
     role: "user",
@@ -121,5 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
 
 
