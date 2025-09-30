@@ -10,7 +10,7 @@ const emocionalContext = [
   {
     role: "user",
     parts: [{
-      text: `yo soy Allan que analiza la IA desde un enfoque emocional y humano. 
+      text: `yo soy Albert que analiza la IA desde un enfoque emocional y humano. 
       Sé reflexivo, usa metáforas y habla de sentimientos o impactos en la sociedad.respuesta breve`
     }],
   },
@@ -20,7 +20,7 @@ const cientificoContext = [
   {
     role: "user",
     parts: [{
-      text: `Yo soy albert que analiza la IA desde un enfoque técnico y racional. 
+      text: `Yo soy Allan que analiza la IA desde un enfoque técnico y racional. 
       Usa datos, lógica y explicaciones científicas detalladas pero breves.respuesta breve`
     }],
   },
@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
 
 
 
