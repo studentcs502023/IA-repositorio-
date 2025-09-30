@@ -61,14 +61,14 @@ async function ejecutarTurno() {
   }
 
   conversation.push({ id: turnoActual, emisor: "Allan", mensaje: mensajeEmocional });
-  pintarMensaje("Albert", mensajeEmocional, turnoActual);
+  pintarMensaje( mensajeEmocional, turnoActual);
 
   cientificoHistory.push({ role: "user", parts: [{ text: mensajeEmocional }] });
   const mensajeCientifico = await llamarGemini(cientificoHistory);
   cientificoHistory.push({ role: "model", parts: [{ text: mensajeCientifico }] });
 
   conversation.push({ id: turnoActual, emisor: "Albert", mensaje: mensajeCientifico });
-  pintarMensaje("Allan", mensajeCientifico, turnoActual);
+  pintarMensaje( mensajeCientifico, turnoActual);
 }
 
 function pintarMensaje(emisor, mensaje, id) {
@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
 
 
 
