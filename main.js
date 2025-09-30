@@ -53,7 +53,7 @@ async function ejecutarTurno() {
       "La IA nos conmueve y nos hace reflexionar sobre lo que significa ser humanos.";
   } else {
     const ultimoMensajeCientifico =
-      conversation.filter((c) => c.emisor === "Allan").slice(-1)[0]?.mensaje || "";
+      conversation.filter((c) => c.emisor === "Albert").slice(-1)[0]?.mensaje || "";
 
     emocionalHistory.push({ role: "user", parts: [{ text: ultimoMensajeCientifico }] });
     mensajeEmocional = await llamarGemini(emocionalHistory);
@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
 
 
 
