@@ -53,21 +53,21 @@ async function ejecutarTurno() {
       "La IA nos conmueve y nos hace reflexionar sobre lo que significa ser humanos.";
   } else {
     const ultimoMensajeCientifico =
-      conversation.filter((c) => c.emisor === "Allan").slice(-1)[0]?.mensaje || "";
+      conversation.filter((c) => c.emisor === "Albert").slice(-1)[0]?.mensaje || "";
 
     emocionalHistory.push({ role: "user", parts: [{ text: ultimoMensajeCientifico }] });
     mensajeEmocional = await llamarGemini(emocionalHistory);
     emocionalHistory.push({ role: "model", parts: [{ text: mensajeEmocional }] });
   }
 
-  conversation.push({ id: turnoActual, emisor: "Albert", mensaje: mensajeEmocional });
+  conversation.push({ id: turnoActual, emisor: "Allan", mensaje: mensajeEmocional });
   pintarMensaje( mensajeEmocional, turnoActual);
 
   cientificoHistory.push({ role: "user", parts: [{ text: mensajeEmocional }] });
   const mensajeCientifico = await llamarGemini(cientificoHistory);
   cientificoHistory.push({ role: "model", parts: [{ text: mensajeCientifico }] });
 
-  conversation.push({ id: turnoActual, emisor: "Allan", mensaje: mensajeCientifico });
+  conversation.push({ id: turnoActual, emisor: "Albert", mensaje: mensajeCientifico });
   pintarMensaje( mensajeCientifico, turnoActual);
 }
 
@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
 
 
 
